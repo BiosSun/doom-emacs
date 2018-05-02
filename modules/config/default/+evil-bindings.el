@@ -140,7 +140,8 @@
         :map ivy-minibuffer-map
         "C-SPC" #'ivy-call-and-recenter  ; preview file
         "C-l"   #'ivy-alt-done
-        "C-v"   #'yank)
+        "C-v"   #'yank
+        "C-w"   #'ivy-backward-delete-char)
        (:after counsel
         :map counsel-ag-map
         "C-SPC"    #'ivy-call-and-recenter ; preview
@@ -163,6 +164,7 @@
          "C-S-k"  #'helm-previous-source)
         "C-u"      #'helm-delete-minibuffer-contents
         "C-s"      #'helm-minibuffer-history
+        "C-b"      #'backward-char
         ;; Swap TAB and C-z
         "TAB"      #'helm-execute-persistent-action
         [tab]      #'helm-execute-persistent-action

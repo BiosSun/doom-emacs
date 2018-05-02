@@ -293,8 +293,8 @@ Continues comments if executed from a commented line. Consults
         :gi  [s-left]      #'doom/backward-to-bol-or-indent
         :gi  [s-right]     #'doom/forward-to-last-non-comment-or-eol
         :gi  [M-backspace] #'backward-kill-word
-        :gi  [M-left]      #'backward-word
-        :gi  [M-right]     #'forward-word))
+        :gi  [M-left]      #'backward-char
+        :gi  [M-right]     #'forward-char))
 
 
 ;;
