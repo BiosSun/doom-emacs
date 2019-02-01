@@ -261,6 +261,14 @@ Continues comments if executed from a commented line. Consults
   (define-key key-translation-map [S-iso-lefttab] [backtab])
   ;; Fix conventional OS keys in Emacs
   (map! "s-`" #'other-frame  ; fix frame-switching
+        ;; custom
+        "s-p" #'+helm/projectile-find-file
+        "s-P" #'counsel-M-x
+        "s-." #'dabbrev-expand
+        "s-<" #'beginning-of-buffer
+        "s->" #'end-of-buffer
+        "s-f" #'forward-word
+        "s-b" #'backward-word
         ;; fix OS window/frame navigation/manipulation keys
         "s-w" #'delete-window
         "s-W" #'delete-frame
@@ -272,7 +280,7 @@ Continues comments if executed from a commented line. Consults
         "s-l" #'goto-line
         ;; Restore OS undo, save, copy, & paste keys (without cua-mode, because
         ;; it imposes some other functionality and overhead we don't need)
-        "s-f" #'swiper
+        ;; TODO "s-f" #'swiper
         "s-z" #'undo
         "s-Z" #'redo
         "s-c" (if (featurep 'evil) #'evil-yank #'copy-region-as-kill)
@@ -281,7 +289,7 @@ Continues comments if executed from a commented line. Consults
         "s-x" #'execute-extended-command
         :v "s-x" #'kill-region
         ;; Buffer-local font scaling
-        "s-+" #'doom/reset-font-size
+        "s-0" #'doom/reset-font-size
         "s-=" #'doom/increase-font-size
         "s--" #'doom/decrease-font-size
         ;; Conventional text-editing keys & motions
