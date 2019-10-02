@@ -67,3 +67,5 @@
 
 ;; And let 'er rip!
 (doom-initialize)
+
+(put 'upcase-region 'disabled nil)
