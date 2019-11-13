@@ -50,6 +50,7 @@ don't have a :trigger property in `+file-templates-alist'.")
     ("/normalize\\.scss$" :trigger "__normalize.scss" :mode scss-mode)
     ("/master\\.scss$" :trigger "__master.scss" :mode scss-mode)
     ("\\.html$" :trigger "__.html" :mode web-mode)
+    ("\\.vue$" :trigger "__.vue" :mode web-mode)
     (scss-mode)
     ;; java
     ("/main\\.java$" :trigger "__main" :mode java-mode)
